@@ -6,7 +6,7 @@
     <div class="card text-center">
         <img class="melon-image" src="{{ melon.image_url }}" alt="Melon Pics">
         <h5>
-    <a href="{{ url_for('individualMelon', melon_id=melon.melon_id) }}">
+    <a href="{{ url_for('individualMelons', melon_id=melon.melon_id) }}">
 {{ melon.common_name }}</a>
         </h5>
     {{ melon.price_str() }}
