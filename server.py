@@ -11,7 +11,10 @@ def homepage():
 
 @app.route("/melons")
 def melonsPage():
-    return render_template("melons.html")
+    melon_list = melons.get_all()   
+    return render_template("melons.html", melon_list = melon_list)
+
+
 
 @app.route("/melon/<melon_id>")
 def individualMelons(melon_id):
