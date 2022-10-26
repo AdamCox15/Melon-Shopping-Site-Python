@@ -26,6 +26,8 @@ def individualMelons(melon_id):
 
 @app.route("/add_to_cart/<melon_id>")
 def add_to_cart(melon_id):
+    if 'username' not in session:
+        return redirect("/login")
     if 'cart' not in session:
         session['cart'] = {}
     cart = session['cart']
@@ -40,6 +42,8 @@ def add_to_cart(melon_id):
 
 @app.route("/cart")
 def cartPage():
+    if 'username' not in session:
+        return redirect("/login")
     order_total = 0
     cart_melons = []
 
@@ -79,7 +83,7 @@ def login():
             return redirect('/login')
 
         session["username"] = user['username']
-        flash("Logged In")
+        flash("Logged in Successful!")
         return redirect("/melons")
         
     
@@ -90,6 +94,10 @@ def logout():
     del session["username"]
     flash("Logged Out.")
     return redirect("/login")
+
+@app.errorhandler(404)
+def error_404(e):
+    return render_template("404.html")
 
 if __name__ == "__main__":
     app.env = "development"
