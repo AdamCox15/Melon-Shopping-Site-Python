@@ -1,3 +1,7 @@
+body{
+    background-color: #61D94E;
+    font-size: 1.5rem;
+}
 .melon-image{
     height: 300px;
     width: 300px;
@@ -7,4 +11,32 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
+}
+.rook {
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 4.5rem;
+    margin-left: 120px;
+    
+}
+.nav-link{
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 2.5rem;
+}
+
+.table{
+    color: #F27979;
+    font-size: 3rem;
+}
+.card{
+    background-color: #F27979;
+    margin: 15px;
+    box-shadow: 15px 10px 10px #F24141;
+}
+.links {
+    color: #0D0D0D;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.indMel{
+    box-shadow: 15px 10px 10px #F24141;
 }

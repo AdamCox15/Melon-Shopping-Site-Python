@@ -6,7 +6,10 @@
       ><img class="melon-image" src="{{ melon.image_url }}" alt="Melon Pics"
     /></a>
     <h5>
-      <a href="{{ url_for('individualMelons', melon_id=melon.melon_id) }}">
+      <a
+        href="{{ url_for('individualMelons', melon_id=melon.melon_id) }}"
+        class="links"
+      >
         {{ melon.common_name }}</a
       >
     </h5>
